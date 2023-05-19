@@ -7,7 +7,7 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/co
 
 export default async function Home() {
 
-    let req = await fetch('https://www.apple.com/support/systemstatus/data/developer/system_status_en_US.js')
+    let req = await fetch('https://www.apple.com/support/systemstatus/data/developer/system_status_en_US.js', { next: { revalidate: 3600 } })
     let data = await req.text()
 
     let developerStatus = data.split("(")[1].split(")")[0]
@@ -16,17 +16,19 @@ export default async function Home() {
 
     console.log(services)
 
-    services.forEach((service, i) => {
+    services.forEach((service: any, i) => {
         if (service.events.length != 0) {
             console.log(service.events)
+
             services.unshift(services.splice(i, 1)[0]);
+
         }
     })
 
     return (
         <>
             <H1>
-                Developer Status
+                Apple Developer Services Status
             </H1>
             <br />
             <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">

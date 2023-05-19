@@ -30,21 +30,21 @@ export function NavigationBar() {
                     <NavigationMenuItem>
                         <Link href="/" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                <HomeIcon size={24} color={pathname == '/' ? 'blue' : "white"} />
+                                <HomeIcon size={24} color={pathname == '/' ? 'lightblue' : "white"} />
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link href="/developer" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                <Code2 size={24} color={pathname == '/developer' ? 'blue' : "white"} />
+                                <Code2 size={24} color={pathname == '/developer' ? 'lightblue' : "white"} />
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link href="/about" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                <InfoIcon size={24} color={pathname == '/about' ? 'blue' : "white"} />
+                                <InfoIcon size={24} color={pathname == '/about' ? 'lightblue' : "white"} />
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
