@@ -7,7 +7,7 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/co
 
 export default async function Home() {
 
-    let req = await fetch('https://www.apple.com/support/systemstatus/data/system_status_en_US.js')
+    let req = await fetch('https://www.apple.com/support/systemstatus/data/system_status_en_US.js', { next: { revalidate: 3600 } })
     let data = await req.text()
 
     let developerStatusJSON = JSON.parse(data)

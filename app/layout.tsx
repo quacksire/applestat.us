@@ -22,6 +22,16 @@ export default function RootLayout({
       <NavigationBar/>
       <br />
       <div className="container mx-auto px-4">{children}</div>
+      <footer className="container mx-auto px-4">
+        <div className="flex flex-col items-center justify-center py-4">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+                applestat.us is not affiliated with Apple Inc.
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+                Made with ❤️ by <a href="https://quacksire.dev">Quacksire</a>
+            </p>
+        </div>
+        </footer>
       </body>
       </html>
   )
