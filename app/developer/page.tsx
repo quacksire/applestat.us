@@ -16,7 +16,7 @@ export default async function Home() {
 
     console.log(services)
 
-    services.forEach((service: any, i) => {
+    services.forEach((service: any, i: any) => {
         if (service.events.length != 0) {
             console.log(service.events)
 
@@ -32,7 +32,7 @@ export default async function Home() {
             </H1>
             <br />
             <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-                {services.map(service => (
+                {services.map((service: any) => (
                     <Card key={service.serviceName} className={"hover:bg-secondary hover:shadow"}>
                         <Accordion type="single" collapsible className="w-full" disabled={service.events.length == 0}>
                             <AccordionItem value="item-1">
@@ -53,7 +53,7 @@ export default async function Home() {
                             </AccordionTrigger>
                                 <AccordionContent>
                                     <CardContent>
-                                            {service.events.map(event => (
+                                            {service.events.map((event: any) => (
                                                 <div key={event.eventStatus}>
                                                     <code>{new Date(event.epochStartDate).toLocaleString()}</code> - {event.message}
                                                 </div>
