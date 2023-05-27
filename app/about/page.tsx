@@ -60,7 +60,7 @@ export default function About() {
                     </CardHeader>
                     <CardContent>
                         <p className={"leading-7 [&:not(:first-child)]:mt-6"}>
-                            Yes! This website is open source. You can find the source code on <Link href={"https://github.com/quacksire/applestat.us"}>Github</Link>.
+                            Yes! This website is open source. You can find the source code on <Link href={"https://github.com/quacksire/applestat.us"}>GitHub</Link>.
                         </p>
                     </CardContent>
                 </Card>
