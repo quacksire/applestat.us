@@ -57,6 +57,7 @@ export const metadata = {
 }
 
 import {Providers} from '@/components/providers'
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -82,6 +83,10 @@ export default function RootLayout({
         </footer>
       </Providers>
       </body>
+
+      <Script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f5fcd52de909456882ad9e4d61e645dd"}' onLoad={() => {
+          console.log('Cloudflare Beacon has loaded')
+      }} />
 
       </html>
   )
