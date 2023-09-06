@@ -97,7 +97,7 @@ export default async function ServicePage({params}: { params: { service: string 
 
     console.log(requestedService)
 
-    let filterResult;
+    let filterResult: any = null;
 
     let req = await fetch('https://www.apple.com/support/systemstatus/data/developer/system_status_en_US.js', {next: {revalidate: 3600}})
     let data = await req.text()
