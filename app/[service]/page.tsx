@@ -81,7 +81,8 @@ export async function generateMetadata(
     return {
         title: `${filterResult.serviceName}`,
         generator: 'Next.js v13 App Router',
-        keywords: keywordsArray
+        keywords: keywordsArray,
+        description: `Check the status of ${filterResult.serviceName}`
     }
 
 
