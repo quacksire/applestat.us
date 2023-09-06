@@ -54,6 +54,7 @@ export const metadata = {
     other: {
         source: 'https://github.com/quacksire/applestat.us.git',
     },
+    manifest: "https://applestat.us/manifest.json"
 }
 
 import {Providers} from '@/components/providers'
