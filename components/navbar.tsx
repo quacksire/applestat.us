@@ -18,9 +18,24 @@ import {usePathname} from "next/navigation";
 
 import { Separator } from "@/components/ui/separator"
 import {Code2, HomeIcon, InfoIcon} from "lucide-react";
+import {useEffect} from "react";
 
 export function NavigationBar() {
     const pathname = usePathname();
+
+    useEffect(() => {
+        console.info(`
+            Hello! \n
+            I'm a 17-year old High School senior student self taught in React/Vue. I currently live in the SF Bay Area\n
+            This project is a prime example of how React Server Components can be used in a dashboard like view, and how RSCs can successfully be used with SEO/PWA features
+            
+            This was not an academic project, I made it with my own free will.
+            
+            If you're curious, this is the GitHUb repository: https://github.com/quacksire/applestat.us \n
+            - Sam \<\s\a\m\@\qu\a\c\k\s\i\r\e\.\d\e\v\>
+            
+            `)
+    }, []);
 
     return (
         <>

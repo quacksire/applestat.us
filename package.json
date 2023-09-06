@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@devmehq/open-graph-extractor": "^1.0.4",
+    "@nextui-org/react": "^2.1.7",
     "@radix-ui/react-accordion": "^1.1.1",
     "@radix-ui/react-aspect-ratio": "^1.0.2",
     "@radix-ui/react-hover-card": "^1.0.5",
@@ -29,6 +31,7 @@
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
+    "framer-motion": "^10.16.1",
     "lucide-react": "^0.219.0",
     "next": "13.4.2",
     "postcss": "8.4.23",
