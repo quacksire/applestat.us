@@ -54,6 +54,7 @@ export const metadata = {
     other: {
         source: 'https://github.com/quacksire/applestat.us.git',
     },
+    manifest: "https://applestat.us/manifest.json"
 }
 
 import {Providers} from '@/components/providers'
@@ -71,7 +72,9 @@ export default function RootLayout({
       <Providers>
       <NavigationBar/>
       <br />
-      <div className="container mx-auto px-4">{children}</div>
+      <div className="container mx-auto px-4 min-h-screen">
+          {children}
+      </div>
       <footer className="container mx-auto px-4 bottom-1">
         <div className="flex flex-col items-center justify-center py-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
