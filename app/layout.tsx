@@ -58,6 +58,7 @@ export const metadata = {
 
 import {Providers} from '@/components/providers'
 import Script from "next/script";
+import {cn} from "@/lib/utils";
 
 export default function RootLayout({
   children,
@@ -66,12 +67,12 @@ export default function RootLayout({
 }) {
   return (
       <html lang="en" className={'dark'}>
-      <body className={inter.className}>
+      <body className={cn(inter.className, 'h-screen')}>
       <Providers>
       <NavigationBar/>
       <br />
       <div className="container mx-auto px-4">{children}</div>
-      <footer className="container mx-auto px-4">
+      <footer className="container mx-auto px-4 bottom-1">
         <div className="flex flex-col items-center justify-center py-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
                 applestat.us is not affiliated with Apple Inc.

@@ -162,7 +162,7 @@ export default async function ServicePage({params}: { params: { service: string 
                 {/* @ts-ignore */}
                 {filterResult.events.map((event: { eventStatus: any; statusType: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | PromiseLikeOfReactNode | null | undefined; message: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | PromiseLikeOfReactNode | null | undefined; startDate: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | PromiseLikeOfReactNode | null | undefined; endDate: any; }) => {
                     return (
-                        <Card className="py-4 w-[25]">
+                        <Card className="py-4 w-[25] mt-3">
                             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                                 <p className="text-tiny uppercase font-bold">{String(event.eventStatus).toLocaleUpperCase()} {event.statusType}</p>
                                 <small className=" text-large">{event.message}</small>
